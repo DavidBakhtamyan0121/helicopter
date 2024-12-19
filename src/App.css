@@ -6,4 +6,47 @@
   height: 80vh;
   border: 2px solid black
 }
-
+.Point{
+  z-index: -1;
+  position: absolute;
+  background-color: orange;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.score{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Container{
+  display: flex;
+  flex-direction: column;
+}
+.Portal{
+  position: absolute;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  opacity: 0.8;
+}
+.PortalContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 40vh;
+  background-color: white;
+  border-radius: 10px;
+}
