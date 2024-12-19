@@ -1,0 +1,82 @@
+.helicopter {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 0;
+}
+.cockpit {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px 40px 50px 50px;
+    background-color: #44d2fd;
+}
+.cockpit::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #302e37;
+}
+.tail {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+    border-top: 1px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 35px solid #2fadd2;
+    border-bottom-right-radius: 1px;
+    height: 2px;
+}
+.rotor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #a299ab;
+    position: absolute;
+    top: -100%;
+    left: 54%;
+    opacity: 0.5;
+    transform: scaleY(0.075) translateX(-50%);
+}
+
+.rotator div {
+    position: absolute;
+    right: 50%;
+    margin-left: -35px;
+    margin-top: -3px;
+    width: 7px;
+    height: 40px;
+    background-color: white;
+    animation: rotate 0.6s linear infinite;
+
+}
+.rotator div:nth-child(1){
+    transform: rotate(0deg);
+}
+.rotor div:nth-child(2) {
+    transform: rotate(90deg);
+}
+@keyframes bounce {
+    0%,100%{
+        transform: translate(0px, -5px) rotate(-15deg);
+    }
+    50% {
+        transform: translate(0px, 5px) rotate(-10deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
